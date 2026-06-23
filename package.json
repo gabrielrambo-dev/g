@@ -1,0 +1,31 @@
+{
+  "name": "codestudy-pro-desktop",
+  "version": "1.0.1",
+  "description": "CodeStudy Pro Desktop - versão PC com IA contextual",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win portable",
+    "build:dir": "electron-builder --dir"
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest"
+  },
+  "build": {
+    "appId": "com.codestudy.prodesktop",
+    "productName": "CodeStudy Pro Desktop",
+    "files": [
+      "main.js",
+      "app/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "artifactName": "CodeStudy-Pro-Desktop-${version}.${ext}"
+    }
+  }
+}
